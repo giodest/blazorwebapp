@@ -1,5 +1,29 @@
-﻿<h3>Form</h3>
+﻿@page "/Submit form"
+@using MudBlazor
+@using System.ComponentModel.DataAnnotations
+@using blazorwebapp.Model
 
+<h3>Submit Form</h3>
+
+<EditForm Model="@oggetto" OnValidSubmit="OnValidSubmit">
+	<MudGrid>
+		<MudItem>
+			<MudTextField Label="Name" @bind-Value="@oggetto.Name" />
+			<MudTextField Label="Surname" @bind-Value="@oggetto.Surname" />
+			<MudTextField Label="Email" @bind-Value="@oggetto.Email" />
+			<MudTextField Label="Phone" @bind-Value="@oggetto.PhoneNumber" />
+			<MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
+		</MudItem>
+	</MudGrid>
+
+</EditForm>
+@inject AppDbContext dbContext
 @code {
+	Oggetto oggetto = new Oggetto();
 
+	private async Task OnValidSubmit()
+	{
+		dbContext.Oggetti.Add(oggetto);
+		await dbContext.SaveChangesAsync();
+	}
 }
