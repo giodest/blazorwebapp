@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9POK8zaveh+sOHcaN3m0NkBpIXG1WtHJCZ8goTkryUIT4qWxh+w0KQUJ1ASPWghCOJwGLDQ+oaH2T1BgzuCngA==",
+  "dgSpecHash": "t+QBEfXl+8W4l4MNHiVvlMXkcAXA6TYphVOecPccaWOmp7hTzpB0wFx1ZzuMiCkYYexTE2VsoFEmVXYdso9Pag==",
   "success": true,
   "projectFilePath": "C:\\Users\\destr\\source\\repos\\blazorwebapp\\blazorwebapp\\blazorwebapp.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,8 @@
     "C:\\Users\\destr\\.nuget\\packages\\microsoft.jsinterop\\8.0.8\\microsoft.jsinterop.8.0.8.nupkg.sha512",
     "C:\\Users\\destr\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\destr\\.nuget\\packages\\mudblazor\\7.8.0\\mudblazor.7.8.0.nupkg.sha512",
+    "C:\\Users\\destr\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
+    "C:\\Users\\destr\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.4\\npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
     "C:\\Users\\destr\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\destr\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\destr\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
