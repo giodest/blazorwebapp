@@ -20,7 +20,7 @@ namespace blazorwebapp.Migrations
                     Name = table.Column<string>(type: "text", nullable: true),
                     Surname = table.Column<string>(type: "text", nullable: true),
                     Email = table.Column<string>(type: "text", nullable: true),
-                    PhoneNumber = table.Column<int>(type: "integer", nullable: false)
+                    PhoneNumber = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {

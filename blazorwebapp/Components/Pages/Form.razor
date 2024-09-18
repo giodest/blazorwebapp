@@ -15,15 +15,65 @@
 			<MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
 		</MudItem>
 	</MudGrid>
-
 </EditForm>
+
+
+
+
+@if (saved)
+{
+	<MudGrid>
+		<MudItem md="4" xs="12">
+			<MudAlert Severity="Severity.Success" Dense="true" ShowCloseIcon="true" Class="my-2" CloseIconClicked="(() => CloseMe(true))">Dati inviati correttamente al database.</MudAlert>
+		</MudItem>
+	</MudGrid>
+}
+@if (error)
+{
+	<MudGrid>
+    <MudItem md="4" xs="12">
+			<MudAlert Severity="Severity.Error" Dense="true" ShowCloseIcon="true" Class="my-2" CloseIconClicked="(() => CloseMe(true))">Qualcosa non è andato a buon fine.</MudAlert>
+	</MudItem>
+	</MudGrid>
+}
+@if (!saved && !error)
+{
+    <div style="display: flex; justify-content: center;" class="mt-6">
+    </div>
+}
+
 @inject AppDbContext dbContext
 @code {
-	Oggetto oggetto = new Oggetto();
+	public Oggetto oggetto = new Oggetto();
+
+	public bool error = false;
+	public bool saved = false;
 
 	private async Task OnValidSubmit()
 	{
-		dbContext.Oggetti.Add(oggetto);
-		await dbContext.SaveChangesAsync();
+		saved = false;
+		error = false;
+		try
+		{
+			dbContext.Oggetti.Add(oggetto);
+			await dbContext.SaveChangesAsync();
+			oggetto = new Oggetto();
+			saved = true;
+
+		} 
+		catch (Exception) 
+		{
+			error = true;
+			throw;
+		}
+
+	}
+	private void CloseMe(bool value)
+	{
+		if (value)
+		{
+			saved = false;
+			error = false;
+		}	
 	}
 }

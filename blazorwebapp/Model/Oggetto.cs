@@ -5,14 +5,12 @@ namespace blazorwebapp.Model
 {
 	public class Oggetto
 	{
-		[Key]
-		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
 
 		public string? Name { get; set; }
 		public string? Surname { get; set; }
 		public string? Email { get; set; }
-		public int PhoneNumber { get; set; }
+		public int? PhoneNumber { get; set; }
 
 	}
 }
