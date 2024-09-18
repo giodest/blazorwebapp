@@ -5,3 +5,6 @@
 -Entity Migration</br>
 -Mudblazor Blazor component implementation</br>
 -Submit Form implementation</br>
+-Permanently save Data to DB</br>
+-Saved and Error Alert implementation</br>
+-CloseIcon implementation</br>
