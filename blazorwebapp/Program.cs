@@ -1,11 +1,12 @@
 using blazorwebapp.Components;
+using blazorwebapp.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
 	.AddInteractiveServerComponents();
-
+builder.Services.AddSingleton<AppDbContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
